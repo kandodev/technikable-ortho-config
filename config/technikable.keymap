@@ -24,8 +24,8 @@
         compatible = "zmk,conditional-layers";
 
         tri_layer {
-            if-layers = <1 2>;
-            then-layer = <3>;
+            if-layers = <1 3>;
+            then-layer = <2>;
         };
     };
 
@@ -35,10 +35,10 @@
         base_layer {
             label = "Base";
             bindings = <
-&kp TAB    &kp Q  &kp W     &kp F     &kp P  &kp B                  &kp J  &kp L     &kp U       &kp Y    &kp SEMICOLON  &kp BACKSPACE
-&kp LCTRL  &kp A  &kp R     &kp S     &kp T  &kp G                  &kp M  &kp N     &kp E       &kp I    &kp O          &kp SQT
-&kp LSHFT  &kp Z  &kp X     &kp C     &kp D  &kp V                  &kp K  &kp H     &kp COMMA   &kp DOT  &kp FSLH       &kp RET
-                  &kp LALT  &kp LWIN  &mo 3  &kp SPACE  &kp RETURN  &mo 1  &kp RALT  &kp ESCAPE
+&kp TAB    &kp Q  &kp W     &kp F  &kp P         &kp B                  &kp J  &kp L     &kp U       &kp Y    &kp SEMICOLON  &kp BACKSPACE
+&kp LCTRL  &kp A  &kp R     &kp S  &kp T         &kp G                  &kp M  &kp N     &kp E       &kp I    &kp O          &kp SQT
+&kp LSHFT  &kp Z  &kp X     &kp C  &kp D         &kp V                  &kp K  &kp H     &kp COMMA   &kp DOT  &kp FSLH       &kp RET
+                  &kp LALT  &mo 2  &kp LEFT_WIN  &kp SPACE  &kp RETURN  &mo 1  &kp RALT  &kp ESCAPE
             >;
         };
 
@@ -52,16 +52,6 @@
             >;
         };
 
-        num_layer {
-            label = "Num";
-            bindings = <
-&trans  &kp LBKT   &kp N7  &kp N8  &kp N9  &kp RBKT          &kp C_PREV  &trans   &trans  &trans  &trans  &trans
-&trans  &kp MINUS  &kp N4  &kp N5  &kp N6  &kp EQUAL         &kp C_NEXT  &trans   &trans  &trans  &trans  &trans
-&trans  &kp GRAVE  &kp N1  &kp N2  &kp N3  &kp BSLH          &trans      &trans   &trans  &trans  &trans  &trans
-                   &trans  &kp N0  &trans  &none      &none  &kp ESC     &kp DEL  &trans
-            >;
-        };
-
         sym_layer {
             label = "Sym";
             bindings = <
@@ -69,6 +59,16 @@
 &trans     &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp BACKSLASH  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS          &kp PLUS      &kp MINUS  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp PIPE  &trans
 &trans     &kp TILDE         &kp LS(N1)         &kp LS(N2)     &kp LS(N3)            &kp LS(BSLH)                   &trans        &trans     &trans          &trans           &trans    &trans
                              &trans             &kp LS(N0)     &trans                &trans                 &trans  &trans        &trans     &trans
+            >;
+        };
+
+        num_layer {
+            label = "Num";
+            bindings = <
+&trans  &kp LBKT   &kp N7  &kp N8  &kp N9  &kp RBKT          &kp C_PREV  &trans   &trans  &trans  &trans  &trans
+&trans  &kp MINUS  &kp N4  &kp N5  &kp N6  &kp EQUAL         &kp C_NEXT  &trans   &trans  &trans  &trans  &trans
+&trans  &kp GRAVE  &kp N1  &kp N2  &kp N3  &kp BSLH          &trans      &trans   &trans  &trans  &trans  &trans
+                   &trans  &kp N0  &trans  &none      &none  &kp ESC     &kp DEL  &trans
             >;
         };
     };
