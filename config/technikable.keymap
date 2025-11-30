@@ -20,14 +20,7 @@
 / {
     chosen { zmk,matrix_transform = &ortho_transform; };
 
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-
-        tri_layer {
-            if-layers = <1 3>;
-            then-layer = <2>;
-        };
-    };
+    conditional_layers { compatible = "zmk,conditional-layers"; };
 
     keymap {
         compatible = "zmk,keymap";
@@ -35,10 +28,10 @@
         base_layer {
             label = "Base";
             bindings = <
-&kp TAB    &kp Q  &kp W     &kp F  &kp P         &kp B                  &kp J  &kp L     &kp U       &kp Y    &kp SEMICOLON  &kp BACKSPACE
-&kp LCTRL  &kp A  &kp R     &kp S  &kp T         &kp G                  &kp M  &kp N     &kp E       &kp I    &kp O          &kp SQT
-&kp LSHFT  &kp Z  &kp X     &kp C  &kp D         &kp V                  &kp K  &kp H     &kp COMMA   &kp DOT  &kp FSLH       &kp RET
-                  &kp LALT  &mo 2  &kp LEFT_WIN  &kp SPACE  &kp RETURN  &mo 1  &kp RALT  &kp ESCAPE
+&kp TAB    &kp Q  &kp W     &kp F    &kp P         &kp B                  &kp J  &kp L     &kp U       &kp Y    &kp SEMICOLON  &kp BACKSPACE
+&kp LCTRL  &kp A  &kp R     &kp S    &kp T         &kp G                  &kp M  &kp N     &kp E       &kp I    &kp O          &kp SQT
+&kp LSHFT  &kp Z  &kp X     &kp C    &kp D         &kp V                  &kp K  &kp H     &kp COMMA   &kp DOT  &kp FSLH       &kp RET
+                  &kp LALT  &lt 2 F  &kp LEFT_WIN  &kp SPACE  &kp RETURN  &mo 1  &kp RALT  &kp ESCAPE
             >;
         };
 
